@@ -1,0 +1,68 @@
+
+
+//mixin menu
+-var list =["HOME","ABOUT","MENU","BLOG","CONTACT","ELEMENTS"]
+
+
+//mixin food
+
+-var food=[{name:"Mexican Eggrolls",cost:"$14.50",img:"./images/food1.jpg"},{name:"Chicken Burger",cost:"$9.50",img:"./images/food2.jpg"},{name:"Topu Lansage",cost:"$12.50",img:"./images/food3.jpg"},{name:"Pepper Potatoas",cost:"$14.50",img:"./images/food4.jpg"},{name:"Bean Salad",cost:"$8.50",img:"./images/food5.jpg"},{name:"Beatball Hoagie",cost:"$11.50",img:"./images/food6.jpg"}]
+
+
+
+
+
+//mixin update
+-var update=[{img:"./images/update1.jpg",title:"No Finer Food Can Be Found"},{img:"./images/update2.jpg",title:"Things Go Better With Food"},{img:"./images/update3.jpg",title:"Food Head Above The Rest"}]
+
+
+
+//mixin special
+
+-var special=[{name:"green beans",span:"Garlic",img:"./images/deshes1.png",order:"1"},{name:"rosemary chicken",span:"Lemon",img:"./images/deshes2.png",order:"2"}]
+
+
+
+//mixin form
+-var input=[{icon:"fa fa-calendar",type:"date"},{icon:"fa fa-clock-o",type:"time"},{icon:"fa fa-user-o",type:"text"}]
+
+  mixin input(items)
+    each item in items 
+      .input__group
+        .input__icon
+          span
+            i(class=item.icon)
+        input(type=item.type)
+
+//mixin footer
+
+
+-var iconfooter=["fa fa-map-marker","fa fa-phone","fa fa-envelope-o"]
+-var listfooter =["1234 Some St San Francisco, CA 94102, US 1.800.123.4567","(123) 456 78 90","support@axiomthemes.com"]
+
+
+-var contactlist=[{icon:"fa fa-map-marker",text:"1234 Some St San Francisco, CA 94102, US 1.800.123.4567"},{icon:"fa fa-phone",text:"(123) 456 78 90"},{icon:"fa fa-envelope-o",text:"support@axiomthemes.com"}]
+
+mixin contact(items)
+  each item in items
+    li
+      i(class=item.icon)
+      p= item.text
+
+
+
+-var listopen=[{date:"Monday",time:"Closed"},{date:"Tue-Fri",time:"10 am - 12 pm"},{date:"Sat-Sun",time:"8 am - 11 am"},{date:"Holidays",time:"10 am - 12 pm"}]
+mixin open(items)
+  each item in items
+    li
+      div
+        p= item.date
+        p= item.time
+
+
+-var itemsocial =["fa fa-facebook","fa fa-twitter","fa fa-google-plus","fa fa-pinterest","fa fa-instagram"]
+mixin social(items)
+  each item in items 
+    li
+      a(href="#") 
+        i(class=`${item}`)  

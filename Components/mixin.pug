@@ -1,0 +1,94 @@
+//mixin header
+mixin menu(list)
+  each item in list 
+    li
+      a(href="#")= item
+
+
+
+//mixin food
+mixin fooditem(foods)
+  each food in foods
+    .food__item
+      .single__food
+        .food__img
+          img.img(src=food.img)
+        .food__content
+          h5= food.name
+          span= food.cost
+          p Face together given moveth divided form Of Seasons that fruitful.
+
+
+
+
+//mixin special
+
+mixin special(items)
+  each item in items
+    .row
+      .special__item(class=`--order-item${item.order}`)
+        h1.--black= `0${item.order}.`
+        .special__item__text
+          h3 
+            span= `${item.span}` 
+            =`${item.name}` 
+          br
+          p Be. Seed saying our signs beginning face give spirit own beast darkness morning moveth green multiply she'd kind saying one shall, two which darkness have day image god their night. his subdue so you rule can.
+          br
+          br
+          span $12.00
+          br
+          a.btn(href="#") BOOK A TABLE
+      .special__img(class=`--order-img${item.order}`)
+        img.img(src=item.img)
+      
+
+//mixin update
+mixin updateitem(foods)
+  each food in foods
+    .update__item
+      .single__food
+        .food__img
+          img.img(src=food.img)
+        .food__content
+          .post-by
+            span
+              i.fa.fa-user-o.mr-2  Admin
+            span 
+              i.fa.fa-calendar-o.mr-2  10/12/2019
+          h4.--left= food.title
+          p Nancy boy off his nut so I said chimney pot be James Bond aking cakes he.s
+          .read-more
+            a(href="#") Read More  
+              i.fa.fa-long-arrow-right
+
+//mixin for input
+
+mixin input(items)
+  each item in items
+    .input__group
+        .input__icon
+          span
+            i(class=item.icon)
+        input(type=item.type)
+
+//mixin footer
+mixin contact(items)
+  each item in items
+    li
+      i(class=item.icon)
+      p= item.text
+
+mixin open(items)
+  each item in items
+    li
+      div
+        p= item.date
+        p= item.time
+
+
+mixin social(items)
+  each item in items 
+    li
+      a(href="#") 
+        i(class=`${item}`)  
